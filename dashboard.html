@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard - Adberry Signals</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Panel de Trading</h1>
+
+<div class="grid">
+
+<div class="card">
+<h2>Telegram</h2>
+<input id="token" placeholder="Bot Token">
+<input id="chatid" placeholder="Chat ID">
+<button onclick="saveTelegram()">Guardar</button>
+</div>
+
+<div class="card">
+<h2>Configuración</h2>
+
+<select id="pair">
+<option>EURUSD</option>
+<option>XAUUSD</option>
+<option>USDJPY</option>
+</select>
+
+<input id="lot" placeholder="Lotaje">
+<input id="capital" placeholder="Capital">
+
+<button onclick="saveTrading()">Guardar</button>
+
+</div>
+
+<div class="card">
+
+<h2>Procesador de señales</h2>
+
+<textarea id="signal"></textarea>
+
+<button onclick="parseSignal()">Procesar señal</button>
+
+<pre id="result"></pre>
+
+</div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
