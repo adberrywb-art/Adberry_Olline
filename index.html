@@ -827,6 +827,38 @@
     </div>
 
     <script>
+      // ==================== CONFIGURACIÓN STRIPE ====================
+// CAMBIA AQUÍ: pk_test_... por pk_live_... cuando estés en producción
+const stripe = Stripe('pk_live_51SgaUKRvcXwFOa1F7bMFEu5kKlDMLdJJvfEyNs3qG494smOCL1EaBE4oA1rlwMbgWyQw9xUWKKMbyeaRvkOOFw0400tpL1LJLO'); // ← REEMPLAZA ESTO
+const elements = stripe.elements();
+let cardElement;
+
+// Inicializar card element cuando se muestre el checkout
+function initCardElement() {
+    if (!cardElement) {
+        cardElement = elements.create('card', {
+            style: {
+                base: {
+                    fontSize: '16px',
+                    color: '#424770',
+                    '::placeholder': {
+                        color: '#aab7c4',
+                    },
+                },
+                invalid: {
+                    color: '#9e2146',
+                },
+            },
+        });
+        
+        // Montar en el contenedor
+        const container = document.getElementById('card-element');
+        if (container) {
+            container.innerHTML = ''; // Limpiar inputs falsos
+            cardElement.mount('#card-element');
+        }
+    }
+}
         // ==================== CONFIGURACIÓN DE FIREBASE ====================
         // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
