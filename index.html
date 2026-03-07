@@ -728,27 +728,8 @@
     </div>
 
     <!-- Modal del Mapa -->
-    <div id="map-modal" class="fixed inset-0 z-50 hidden">
-        <div class="absolute inset-0 bg-black/60 modal-backdrop" onclick="closeMapModal()"></div>
-        <div class="absolute inset-0 flex items-center justify-center p-4">
-            <div class="bg-white rounded-2xl shadow-2xl w-full max-w-3xl overflow-hidden">
-                <div class="p-4 border-b border-gray-200 flex justify-between items-center">
-                    <h3 class="text-lg font-bold">Selecciona tu ubicación</h3>
-                    <button onclick="closeMapModal()" class="text-gray-400 hover:text-gray-600">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                        </svg>
-                    </button>
-                </div>
-                <div id="map" class="w-full h-96 bg-gray-100"></div>
-                <div class="p-4 bg-gray-50 flex justify-end space-x-3">
-                    <button onclick="closeMapModal()" class="px-4 py-2 text-gray-600 hover:text-gray-900">Cancelar</button>
-                    <button onclick="confirmMapLocation()" class="px-6 py-2 bg-adberry-red text-white rounded-lg hover:bg-red-700">Confirmar Ubicación</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    <p class="text-sm text-gray-600 mb-4">Ingresa tu dirección de envío:</p>
+    
     <!-- Modal de Contacto -->
     <div id="contact-modal" class="fixed inset-0 z-50 hidden">
         <div class="absolute inset-0 bg-black/60 modal-backdrop" onclick="closeContactModal()"></div>
@@ -771,7 +752,7 @@
                         </svg>
                         <div>
                             <p class="font-medium">WhatsApp</p>
-                            <p class="text-sm text-gray-600">+52 55 1234 5678</p>
+                            <p class="text-sm text-gray-600">+52 5652868721</p>
                         </div>
                     </div>
                 </div>
@@ -906,6 +887,22 @@
                     "Reflectivos nocturnos"
                 ],
                 sizes: ["S", "M", "L", "XL"]
+            }
+                {
+                id: "PROD-004",  // Cambia el número (PROD-004, PROD-005, etc.)
+                name: "Nombre de tu producto",
+                category: "calzado",  // Opciones: "ropa", "calzado", "accesorios"
+                price: 599.00,  // Precio en pesos mexicanos
+                stock: 5,  // Cuántas piezas tienes
+                image: "URL_DE_TU_IMAGEN",  // Sube tu imagen a imgur o similar y pega el link
+                model3D: "",  // Deja vacío si no tienes modelo 3D
+                description: "Descripción de tu producto aquí.",
+                specs: [
+                     "Especificación 1",
+                     "Especificación 2",
+                     "Especificación 3"
+                ],
+                sizes: ["S", "M", "L", "XL"]  // Las tallas que tengas disponibles
             }
         ];
 
